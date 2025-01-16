@@ -20,6 +20,7 @@
 }
 
 .navbar-toggler-icon{
+  margin-right: 5px;
   text-anchor: middle;
   transform: rotate(90deg);
   color: white;
