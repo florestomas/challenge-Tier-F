@@ -1,33 +1,32 @@
 
-
-
 /* NavBar */
 
 
 .navbar{
-    color: #f5e500;
-    background-color: #a73f46;
+  color: #f5e500;
+  background-color: #a73f46;
 }
 
 .navbar .brand{
-    color: white;
-    font-family: "MedievalSharp", sans-serif;
-    font-size: 25px;
+  color: white;
+  font-family: "MedievalSharp", sans-serif;
+  font-size: 25px;
 }
 
 
 .navbar-toggler{
-    position: relative;
-    z-index: 100;
+  position: relative;
+  z-index: 100;
 }
 
 .navbar-toggler-icon{
-    transform: rotate(90deg);
-    color: white;
+  text-anchor: middle;
+  transform: rotate(90deg);
+  color: white;
 }
 
 /* Body */
 
 body{
-    background-color: white;
+  background-color: white;
 }
