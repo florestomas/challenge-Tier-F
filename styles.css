@@ -31,3 +31,10 @@
 body{
   background-color: white;
 }
+
+
+/* Album Productos */
+
+.album img{
+  width: 100%;
+}

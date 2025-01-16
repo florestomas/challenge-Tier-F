@@ -51,7 +51,7 @@
         <div class="navbar-header container">
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">Sobre la pagina</h4>
+              <h4 class="text-black">Sobre la pagina</h4>
               <p class="text-muted">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
                 itaque sint natus ipsam dignissimos reiciendis, doloribus
@@ -60,30 +60,21 @@
               </p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contacto</h4>
+              <h4 class="text-black">Contacto</h4>
               <ul class="list-unstyled">
                 <li>
                   <a
                     rel="noreferrer noopener"
                     target="_blank"
                     href="https://www.linkedin.com/in/tomas-flores-mancilla-7b77481a5/"
-                    class="text-white"
                     >Linkedin <i class="bi bi-linkedin"></i
                   ></a>
                 </li>
                 <li>
                   <a
-                    href="https://getbootstrap.com/docs/4.4/examples/album/#"
-                    class="text-white"
-                    >Seguime en
+                    href="mailto:florestomas@gmail.com"
+                    >Enviar correo <i class="bi bi-envelope-at"></i>
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="https://getbootstrap.com/docs/4.4/examples/album/#"
-                    class="text-white"
-                    >Email me</a
-                  >
                 </li>
               </ul>
             </div>
@@ -111,81 +102,112 @@
     </header>
 
     <main role="main">
-      <!-- main: HTM5 que indica que es el contenido principal de la pag-->
       <section class="jumbotron text-center">
         <div class="container">
           <h1>Album de Productos DragoDev</h1>
           <p class="lead text-muted">
-            <!-- text-muted saca la opacidad, lo pone commo un texto secunadrio -->
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia id in
             dolorem illo pariatur culpa nemo aperiam deserunt nisi cum?
           </p>
-          <p>
-            <a
-              href="https://getbootstrap.com/docs/4.4/ex  amples/album/#"
-              class="btn btn-primary my-2"
-              >Crear un nuevo producto</a
-            >
-          </p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+            Alta de producto
+          </button>
         </div>
       </section>
 
+      <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="formModalLabel">Alta de Producto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="titulo" class="form-label">Título</label>
+                  <input type="text" id="titulo" name="titulo" class="form-control" maxlength="50" placeholder="Máximo 50 caracteres" required>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="descripcion" class="form-label">Descripción</label>
+                  <textarea id="descripcion" name="descripcion" class="form-control" maxlength="200" rows="3" placeholder="Máximo 200 caracteres" required></textarea>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="precio" class="form-label">Precio</label>
+                  <input type="number" id="precio" name="precio" class="form-control" min="0" placeholder="Ej: 1500" required>
+                </div>
+              
+                <div class="mb-3">
+                  <label for="ubicacion" class="form-label">Ubicación</label>
+                  <input type="text" id="ubicacion" name="ubicacion" class="form-control" maxlength="100" placeholder="Máximo 100 caracteres" required>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Crear Producto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Album de productos -->
       <div class="album py-5">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4">
-                <img src="..." class="card-img-top" alt="..." />
+                <img src="/images/dragodevs_logo.jpeg" class="card-img-top" alt="Un producto DragoDev" />
                 <div class="card-body">
                   <h5 class="card-title">Titulo Producto</h5>
                   <p class="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                    <span>Precio: $22 USD</span>
+                  </div>
                 </div>
               </div>
             </div>
             <!-- Aca Bootstrap commo llegamos a 12 columnas se crea una nueva fila -->
             <div class="col-md-4">
               <div class="card mb-4">
-                <img src="..." class="card-img-top" alt="..." />
+                <img src="/images/dragodevs_logo.jpeg" class="card-img-top" alt="Un producto DragoDev" />
                 <div class="card-body">
                   <h5 class="card-title">Titulo Producto</h5>
                   <p class="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                    <span>Precio: $22 USD</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="card mb-4">
-                <img src="..." class="card-img-top" alt="..." />
+                <img src="/images/dragodevs_logo.jpeg" class="card-img-top" alt="Un producto DragoDev" />
                 <div class="card-body">
                   <h5 class="card-title">Titulo Producto</h5>
                   <p class="card-text">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </p>
-                  <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                    <span>Precio: $22 USD</span>
+                  </div>
+                  
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="card mb-4">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Titulo Producto</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -193,5 +215,13 @@
 
     <!-- Script JS-->
     <script src="script.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
   </body>
 </html>
